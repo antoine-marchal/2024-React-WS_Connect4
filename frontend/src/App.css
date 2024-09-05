@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* Board container */
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 200px) {
+  .board {
+    grid-template-columns: repeat(7, 80px);
+    grid-template-rows: repeat(6, 80px);
+  }
+}
+
+/* Individual cells */
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+}
+.cell[data-value="X"] {
+  background-color: #ff0000;
+}
+.cell[data-value="O"] {
+  background-color: #000000;
+  color: white;
+}
+.cell:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.cell:active {
+  background-color: #ccc;
+}
+
+@media (max-width: 200px) {
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+
+/* Game messages */
+h2 {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+@media (max-width: 200px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+.footer {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.scores{
+  font-size:0.8rem;
+  text-align: center;
+}
